@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>TIMESEVERED</title>
+  <style>
+    @font-face {
+      font-family: EpiceneDisplay;
+      src: url('otf/EpiceneDisplay-Light.otf') format('opentype');
+      font-weight: lighter;
+    }
+
+    body {
+      font: EpiceneDisplay;
+      background-color: #faf9f6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+  
+
+   a {color: black;
+      text-decoration: none;
+      font-size: 10vh;}
+
+      a:hover {
+        text-transform: capitalize;
+        text-decoration: underline;
+      }
+
+  
+
+    @keyframes breathe {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(2);
+      }
+    }
+
+
+    .about {
+       position: fixed;
+  top: 1vh;
+  left: 1vw;
+  border-radius: 50%;
+    }
+
+    .button {  border-radius: 50%;
+
+    }
+
+    .fade-in-text {
+      animation: fadeInText 3s forwards;
+    }
+
+    @keyframes fadeInText {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+.shop {
+  animation: breathe 30s infinite;
+
+}
+
+
+
+
+
+.dot-menu {
+  position: fixed;
+  top: 1vh;
+  right: 1vw;
+  width: 1.2vh;
+  height: 1.2vh;
+  background-color: black;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.link-popup {
+  display: none;
+  position: fixed;
+  top: 4vh;
+  right: 1vw;
+  background-color: #faf9f6;
+  border: 1px solid dimgrey;
+  padding: 1vh 1vw;
+  font-family: EpiceneDisplay;
+  font-size: 1.8vh;
+  text-align: left;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  z-index: 99;
+}
+
+.link-popup a {
+  display: block;
+  color: black;
+  text-decoration: none;
+  margin-bottom: 0.5vh;
+}
+
+.link-popup a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+    .footer {
+      font: EpiceneDisplay;
+      font-size: 2.5vh;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      z-index: -1;
+      animation: footerAnimation 30s infinite;
+
+
+    }
+p.one {
+     word-spacing: -3px;
+   }
+
+    @keyframes footerAnimation {
+      0%,
+      100% {
+        color: dimgrey;
+      }
+
+      50% {
+        color: #faf9f6;
+      }
+    }
+
+    .code {
+      font-size: 1.5vh;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="about">
+  <button onclick="myFunction()">about</button></div>
+
+
+
+
+<div class="dot-menu" onclick="toggleLinks()"></div>
+
+<div class="link-popup" id="linkPopup">
+  <a href="https://forms.gle/HzEGq6veE5hSBA818" target="_blank">contact</a><br>
+  <a href="https://www.instagram.com/timesevered" target="_blank">ig</a><br>
+  <a href="https://x.com/timesevered" target="_blank">x</a>
+  <a href="https://www.youtube.com/@timesevered" target="_blank">youtube</a>
+</div>
+
+
+
+
+  <div class="shop"> 
+  <a href="https://www.mercari.com/u/timesevered/" target="_blank">shop</a> </div>
+
+    <div class="footer">
+    <p class="one">© 2025 TIMESEVERED
+  </div>
+
+  <script>
+
+function myFunction() {
+  alert("TIMESEVERED’s 1st experience hand-knitting dates back to 2020, took a course @ Parsons New School of Design during her senior year. The intrigue never dissipated. Initially trained as a communication designer. Enjoys the turtle-walking-through-peanut-butter execution of handmade products that spark delight + exude craftsmanship. \n\nHandmade Statement \nEach piece is time—consumingly handcrafted with hyperfixated attention. While we guarantee superb quality, slight imperfections may arise. These delicate irregularities are what makes handcrafted items human + 1/1 whilst designing / creating with longevity / durability intact. Expect signs of hands in TIMESEVERED creations.");
+}
+
+
+function toggleLinks() {
+  const popup = document.getElementById("linkPopup");
+  popup.style.display = popup.style.display === "block" ? "none" : "block";
+}
+
+  </script>
+</body>
+
+</html>
